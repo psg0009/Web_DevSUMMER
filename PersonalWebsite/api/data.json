@@ -1,0 +1,64 @@
+{
+    "machine_learning_algorithms": [
+        {
+            "name": "Linear Regression",
+            "type": "Supervised",
+            "description": "A linear approach to modeling the relationship between a dependent variable and one or more independent variables.",
+            "applications": [
+                "Predicting house prices",
+                "Forecasting sales",
+                "Risk management"
+            ]
+        },
+        {
+            "name": "K-Nearest Neighbors",
+            "type": "Supervised",
+            "description": "A non-parametric method used for classification and regression by analyzing the k nearest neighbors of a point.",
+            "applications": [
+                "Recommendation systems",
+                "Image recognition",
+                "Medical diagnostics"
+            ]
+        },
+        {
+            "name": "Support Vector Machine",
+            "type": "Supervised",
+            "description": "A classification method that separates data into classes using a hyperplane that maximizes the margin between them.",
+            "applications": [
+                "Text categorization",
+                "Bioinformatics",
+                "Handwriting recognition"
+            ]
+        },
+        {
+            "name": "K-Means Clustering",
+            "type": "Unsupervised",
+            "description": "A clustering algorithm that partitions data into k distinct clusters based on the mean of the points in each cluster.",
+            "applications": [
+                "Market segmentation",
+                "Document clustering",
+                "Image compression"
+            ]
+        },
+        {
+            "name": "Random Forest",
+            "type": "Supervised",
+            "description": "An ensemble learning method that constructs multiple decision trees and merges them to obtain more accurate and stable predictions.",
+            "applications": [
+                "Feature selection",
+                "Fraud detection",
+                "Stock market analysis"
+            ]
+        },
+        {
+            "name": "Principal Component Analysis",
+            "type": "Unsupervised",
+            "description": "A dimensionality reduction technique that transforms data into a set of orthogonal components, ranked by the amount of variance they explain.",
+            "applications": [
+                "Data visualization",
+                "Noise reduction",
+                "Feature extraction"
+            ]
+        }
+    ]
+}
