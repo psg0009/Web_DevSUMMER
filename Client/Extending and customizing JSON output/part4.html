@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Practice</title>
+</head>
+<body>
+  <script>
+    let jsonObject = {
+      year: 2017,
+      month: 4,
+      day: 9,
+      hour: 9,
+      minute: 38
+    };
+    let stringObject = JSON.stringify(jsonObject, ["year", "month", "day"]);
+    console.log(stringObject);
+  </script>
+</body>
+</html>

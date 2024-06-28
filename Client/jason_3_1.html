@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript JSON Example</title>
+</head>
+<body>
+  <script>
+    // Creating a JSON object
+    let bondstr = '{"name":"James","age":35}';
+    console.log(bondstr);  // Logs the JSON string
+
+    // Parsing the JSON string to a JavaScript object
+    let bondObj = JSON.parse(bondstr);
+    console.log(bondObj);  // Logs the JavaScript object
+    console.log(bondObj.name);  // Logs "James"
+    console.log(bondObj.age);  // Logs 35
+
+    // Manipulating the object
+    console.log("Happy birthday, " + bondObj.name + "!");
+    bondObj.age += 1;
+    console.log(bondObj.age);  // Logs the updated age
+
+    // Converting the object back to a JSON string
+    bondstr = JSON.stringify(bondObj);
+    console.log(bondstr);  // Logs the updated JSON string
+  </script>
+</body>
+</html>

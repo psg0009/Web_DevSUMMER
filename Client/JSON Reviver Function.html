@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Reviver Function Example</title>
+</head>
+<body>
+  <script>
+    let bondstr = '{"name":"James","age":"35"}';
+
+    // Parsing JSON with a reviver function
+    let bondObj = JSON.parse(bondstr, function(key, value) {
+      if (key === "age") {
+        return Number(value);  // Converts age from string to number
+      }
+      return value;
+    });
+
+    console.log(bondObj);  // Logs the JavaScript object with the age as a number
+  </script>
+</body>
+</html>

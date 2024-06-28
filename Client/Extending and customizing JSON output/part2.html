@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Practice</title>
+</head>
+<body>
+  <script>
+    let stringStructure = '{"name": "Pau Gasol", "height": {"ft": 7, "in": 0}, "points": 22, "position": "Point guard"}';
+    let jsonStructure = JSON.parse(stringStructure);
+    jsonStructure.points += 28;
+    let updatedStringStructure = JSON.stringify(jsonStructure);
+    console.log(updatedStringStructure);
+  </script>
+</body>
+</html>

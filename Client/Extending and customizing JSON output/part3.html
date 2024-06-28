@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Practice</title>
+</head>
+<body>
+  <script>
+    let stringObject = '{"year": 2017, "month": 8, "day": 9, "hour": 8, "minute": 38}';
+    let jsonData = JSON.parse(stringObject, (key, value) => {
+      if (key === "year") {
+        return value - 2;
+      }
+      return value;
+    });
+    console.log(jsonData);
+  </script>
+</body>
+</html>

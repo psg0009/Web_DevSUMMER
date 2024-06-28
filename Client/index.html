@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Object Example</title>
+</head>
+<body>
+  <script>
+    function house(rms, stl, yr, gar) {
+      this.rooms = rms;
+      this.style = stl;
+      this.yearBuilt = yr;
+      this.hasGarage = gar;
+    }
+
+    let myhouse = new house(8, "Ranch", 1990, true);
+
+    console.log(myhouse);
+    console.log(myhouse.rooms);      // 8
+    console.log(myhouse.style);      // "Ranch"
+    console.log(myhouse.yearBuilt);  // 1990
+    console.log(myhouse.hasGarage);  // true
+    
+
+    // Dynamically extend an object instance
+    let yourhouse = new house(12, "Tudor", 1934, true);
+    yourhouse.hasPorch = false;
+    yourhouse.windows = 46;
+
+    console.log(yourhouse);
+  </script>
+</body>
+</html>
