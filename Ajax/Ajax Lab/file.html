@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <h1>Weather Forecast</h1>
+    <form id="zipForm">
+        <input type="text" id="zipCode" placeholder="Enter ZIP Code">
+        <input type="submit" value="Get Weather">
+    </form>
+    <div id="forecast"></div>
+
+    <script>
+        document.getElementById('zipForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var zipCode = document.getElementById('zipCode').value;
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?zip=' + zipCode + '&appid=d2d89134c227750dead1a355b4ef3f6d', true);
+            xhr.responseType = 'json'; // Specify JSON response
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = xhr.response;
+                    var forecastList = response.list;
+                    var output = '<ul>';
+                    for (var i = 0; i < forecastList.length; i++) {
+                        var day = forecastList[i];
+                        output += '<li>Day ' + (i + 1) + ': High: ' + day.main.temp_max + ', Low: ' + day.main.temp_min + ', Weather: ' + day.weather[0].description + '</li>';
+                    }
+                    output += '</ul>';
+                    document.getElementById('forecast').innerHTML = output;
+                } else if (xhr.readyState === 4 && xhr.status !== 200) {
+                    document.getElementById('forecast').innerHTML = 'Error: ' + xhr.statusText;
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
